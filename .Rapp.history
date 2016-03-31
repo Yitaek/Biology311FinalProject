@@ -1,0 +1,177 @@
+install.package("ggplot2")
+?install.packaga
+?install.package
+install.package("ggplot2")
+install.packages("ggplot2")
+install.packages("dendextend")
+import(ggplot2)
+library(ggplot2)
+library(dendextend)
+yeast <- read.csv("http://roybatty.org/spellman-tocluster.csv", header=T, row.names=1)
+dim(yeast)
+names(yeast)[1:5]
+row.names(yeast)[1:5]
+summary(yeast$YAL022C)
+hist(yeast$YAL022c)
+hist(yeast$YAL022C)
+hist(yeast$YAL022C, breaks=15, col='firebrick', xlab="Expression of YAL022C", main="Histogram of Gene YAL022C")
+boxplot(yeast$YAL022C, ylab="Expression", main="Boxplot of YAL022C")
+qplot(YAL022C, data=yeast, geom="histogram", binwidth= 0.2)
+qplot(YAL022C, YAL040C, data=yeast, geom="point")
+yeast.cor <- cor(yeast, use="pairwise.complete.obs")
+yeast.dist <- as.dist(1-yeast.cor)
+yeast.tree <- hclust(yeast.dist, method="complete")
+plot(yeast.tree)
+plot(yeast.tree, cex=0.2)
+yeast.dend <- as.dendrogram(yeast.tree)
+nleaves(yeast.dend)
+nnode(yeast.dend)
+nnodes(yeast.dend)
+plot(yeast.dend, leaflab="none")
+yeast.clusters <- cutree(yeast.dend, k-4)
+yeast.clusters <- cutree(yeast.dend, k=4)
+tableyeast.clusters)
+table(yeast.clusters)
+yeast.cluster[1:6]
+yeast.clusters[1:6]
+plot(color_branche(yeast.dend, k=4), leaflab="none")
+plot(color_branch(yeast.dend, k=4), leaflab="none")
+plot(color_branches(yeast.dend, k=4), leaflab="none")
+plot(color_branches(yeast.dend, k=8), leaflab="none")
+yeast.clusters8 <- cutree(yeast.dend, k=8, order_clusters_as_data = FALSE)
+table(yeast.clusters8)
+names(yeast.clutser8[yeast.cluster8 == 1])
+names(yeast.clutser8[yeast.clusters8 == 1])
+names(yeast.clusters8[yeast.clusters8 == 1])
+cluster1 <- names(yeast.clutster8[yeast.cluster8 == 1])
+cluster1 <- names(yeast.cluster8[yeast.cluster8 == 1])
+cluster1 <- names(yeast.clusters8[yeast.clusters8 == 1])
+cat(cluster1, quote=F, sep="\n")
+test.data <- rbind(matrix(rnorm(100, mean=0, sd=0.2),ncol=2),#
+matrix(rnorm(150,mean=1,sd=0.5),ncol=2))
+ean=1,sd=0.5),ncol=2))#
+> c
+colnames(test.data) <- c("x", "y")
+plot(test.data)
+cl = kmeans(test.data, 2)
+names(cl)
+cl <- kmeans(test.data, 2)
+names(cl)
+cl$cluster
+plot(test.data, col = cl$cluster)
+cl$centers
+points(cl$centers, col = 1:2, pch =8, cex=2)
+cl <- kmeans(test.data, 5)
+plot(test.data, col = cl$cluster)
+points(cl$centers, col = 1:5, pch =8 , cex=2)
+cl <- kmeans(test.data, 5, nstart=25)
+plot(test.data, col = cl$cluster)
+points(cl$centers, col = 1:5, pch = 8, cex=2)
+yeast.kmeans <- kmeans(1-yeast.cor, 8)
+kclusters <- yeast.kmeans$cluster
+table(kclusters)
+kclusters <- kclusters[order.dendrogram(yeast.dend)]
+dend.colors <- unique(get_leaves_branches_attr(color_branches(yeast.dend, k#
+=8), attr="col"))
+plot(branches_attr_by_clusters(yeast.dend, kclusters, dend.colors),leaflab="#
+none")
+plot(branches_attr_by_clusters(yeast.dend, kclusters, dend.colors),leaflab="none")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("graph")#
+biocLite("Rgraphviz")#
+biocLite("RBGL")
+source("ClusterCode.r")
+source("ClusteringCode.r")
+names(RosR)
+RosR
+plot(RosR)
+max(RosR)
+plot(RosR[1:10])
+RosR[1:10]
+hist(RosR)
+barplot(RosR)
+names(ccdata)
+rownames(ccdata)
+RosR
+names(ccdata)
+colnames(ccdata)
+prac <- subset(ccdata, grepl("^H2O2_ura3", names(ccdata)))
+names(prac)
+prac <- subset(ccdata, grepl("^H2O2_ura3", colnames(ccdata)))
+colnames(prac)
+prac <- subset(ccdata, grepl("^H2O2", colnames(ccdata)))
+colnames(prac)
+ccdata([1:8])
+ccdata[1:8]
+source("ClusteringCode.r")
+parent
+dim(parent)
+names(parent)
+source("ClusteringCode.r")
+names(parent)
+names(RosRDel)
+source("ClusteringCode.r")
+parent
+source("ClusteringCode.r")
+dim(parent)
+names(parent)
+row.names(parent)
+source("ClusteringCode.r")
+source("ClusteringCode.r")
+source("ClusteringCode.r")
+?heatmap
+source("ClusteringCode.r")
+source("ClusteringCode.r")
+source("ClusteringCode.r")
+source("ClusteringCode.r")
+source("ClusteringCode.r")
+source("ClusteringCode.r")
+source("ClusteringCode.r")
+summary(parent)
+library(ggplot2)#
+library(dendextend)#
+#
+parent.cor <- cor(parent, use="pairwise.complete.obs")#
+parent.dist <- as.dist(1-parent.cor)#
+parent.tree <- hclust(parent.dist, method="complete")#
+#
+plot(parent.tree)
+library(ggplot2)#
+library(dendextend)#
+#
+parent.cor <- cor(parent, use="pairwise.complete.obs")#
+parent.dist <- as.dist(1-parent.cor)#
+parent.tree <- hclust(parent.dist, method="complete")#
+#
+plot(parent.tree)
+t(parent)
+library(ggplot2)#
+library(dendextend)#
+#
+parent.cor <- cor(t(parent), use="pairwise.complete.obs")#
+parent.dist <- as.dist(1-parent.cor)#
+parent.tree <- hclust(parent.dist, method="complete")#
+#
+plot(parent.tree)
+plot(parent.tree, cex=0.2)
+parent.dend <- as.dendrogram(parent.tree)#
+plot(parent.dend, leaflab="none")
+parent.clusters <- cutree(parent.dend, k=4)#
+table(parent.clusters)
+names(parent)
+df(-1)
+heatmap(parent)
+parent
+parent = t(gedata[1:8])
+heatmap(parent)
+gedata = read.csv("GEdata.csv", header=T, row.names=1)#
+#
+# Subset of the Parent Strain#
+parent = t(gedata[1:8])#
+#
+# Subset of the RosR Deletion#
+RosRDel = t(gedata[9:16])#
+#
+# Heatmap for the Parent Strain	#
+library(gplots)#
+heatmap(parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA)

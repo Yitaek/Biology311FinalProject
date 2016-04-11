@@ -1,50 +1,3 @@
-install.package("ggplot2")
-?install.packaga
-?install.package
-install.package("ggplot2")
-install.packages("ggplot2")
-install.packages("dendextend")
-import(ggplot2)
-library(ggplot2)
-library(dendextend)
-yeast <- read.csv("http://roybatty.org/spellman-tocluster.csv", header=T, row.names=1)
-dim(yeast)
-names(yeast)[1:5]
-row.names(yeast)[1:5]
-summary(yeast$YAL022C)
-hist(yeast$YAL022c)
-hist(yeast$YAL022C)
-hist(yeast$YAL022C, breaks=15, col='firebrick', xlab="Expression of YAL022C", main="Histogram of Gene YAL022C")
-boxplot(yeast$YAL022C, ylab="Expression", main="Boxplot of YAL022C")
-qplot(YAL022C, data=yeast, geom="histogram", binwidth= 0.2)
-qplot(YAL022C, YAL040C, data=yeast, geom="point")
-yeast.cor <- cor(yeast, use="pairwise.complete.obs")
-yeast.dist <- as.dist(1-yeast.cor)
-yeast.tree <- hclust(yeast.dist, method="complete")
-plot(yeast.tree)
-plot(yeast.tree, cex=0.2)
-yeast.dend <- as.dendrogram(yeast.tree)
-nleaves(yeast.dend)
-nnode(yeast.dend)
-nnodes(yeast.dend)
-plot(yeast.dend, leaflab="none")
-yeast.clusters <- cutree(yeast.dend, k-4)
-yeast.clusters <- cutree(yeast.dend, k=4)
-tableyeast.clusters)
-table(yeast.clusters)
-yeast.cluster[1:6]
-yeast.clusters[1:6]
-plot(color_branche(yeast.dend, k=4), leaflab="none")
-plot(color_branch(yeast.dend, k=4), leaflab="none")
-plot(color_branches(yeast.dend, k=4), leaflab="none")
-plot(color_branches(yeast.dend, k=8), leaflab="none")
-yeast.clusters8 <- cutree(yeast.dend, k=8, order_clusters_as_data = FALSE)
-table(yeast.clusters8)
-names(yeast.clutser8[yeast.cluster8 == 1])
-names(yeast.clutser8[yeast.clusters8 == 1])
-names(yeast.clusters8[yeast.clusters8 == 1])
-cluster1 <- names(yeast.clutster8[yeast.cluster8 == 1])
-cluster1 <- names(yeast.cluster8[yeast.cluster8 == 1])
 cluster1 <- names(yeast.clusters8[yeast.clusters8 == 1])
 cat(cluster1, quote=F, sep="\n")
 test.data <- rbind(matrix(rnorm(100, mean=0, sd=0.2),ncol=2),#
@@ -80,476 +33,314 @@ source("https://bioconductor.org/biocLite.R")#
 biocLite("graph")#
 biocLite("Rgraphviz")#
 biocLite("RBGL")
-source("ClusteringCode.r")
-rowname(ccdata)
-row.names(parent)
-colnames(parent)
-nleave(parent.dend)
-nleaves(parent.dend)
-nnodes(parent.dend)
-source("ClusteringCode.r")
-source("ClusteringCode.r")
-plot(color_branches(parent.dend, k=7), leaflab="none")
-plot(color_branches(parent.dend, k=6), leaflab="none")
-parent.clusters <- cutree(parent.dend, k=7)#
-table(parent.clusters)
-names(yeast.clusters[yeast.clusters==3])
-names(parent.clusters[parent.clusters==3])
-names(parent.clusters[parent.clusters==4])
-names(parent.clusters[parent.clusters==1])
-names(parent.clusters[parent.clusters==2])
-names(parent.clusters[parent.clusters==4])
-names(parent.clusters[parent.clusters==5])
-names(parent.clusters[parent.clusters==6])
-names(parent)
-parent.clust6 <- parent.clusters[parent.clusters=6]
-dim(parent.clust6)
-parent.clust6 <- names(parent.clusters[parent.clusters=6])
-dim(parent.clust6)
-parent.clust6 <- parent.clusters[parent.clusters==6]
-dim(parent.clust6)
-parent.clust6 <- (parent.clusters[parent.clusters==6])
-dim(parent.clust6)
-parent.clust6 <- names(parent.clusters[parent.clusters==6])
-dim(parent.clust6)
-parent.clust6
-parent.clust6 <- parent.clusters[parent.clusters==6]
-parent.clust6
-pract.cor <- cor(parent.clust6, use="pairwise.complete.obs")
-parent.clusters[parent.clusters==6]
-dim(parent.clusters[parent.clusters==6])
-parent.clusters <- cut(parent.dend, k=7)
-?cutree
-plot(color_branches(parent.dend, h=1), leaflab="none")
-sub.dends <- cut()
-colored.parent <- set(parent.dend, "branches_k_color", h=1)
-sub.dends<- cut(colored.dend, 1)
-sub.dends<- cut(colored.parent, 1)
-seb.dends$upper
-sub.dends$upper
-length(sub.dends$lower)
-sub.dends$lower
-library(gplots)
-heatmap(parent, Colv=NA, Rowv=NA, col=greenred(64))
-?heatmap
-heatmap(parent, Colv=NA, Rowv=NA, col=greenred(64), labCol=NA)
-heatmap(t(parent), Colv=NA, Rowv=NA, col=greenred(64), labCol=NA)
-heatmap(t(parent), Colv=NA, Rowv=NA, col=greenred(64), labRow=NA)
-heatmap(t(parent), Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.4)
-heatmap(t(parent), Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.6)
-5
-heatmap(t(parent), Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)
-dim(parent)
-parent.T
-parent.T = t(parent)#
-max.times <- apply(parent.T, 1, which.max)#
-gene.order <- rev(order(max.times))#
-reordered.parent <- parent.T[gene.order, 1:8]#
-#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)
-my.dist <- function(x) {as.dist(1 - cor(x, use="pairwise.complete.obs"))}
-library(dendextend)#
-#
-my.dist <- function(x) {as.dist(1 - cor(x, use="pairwise.complete.obs"))}#
-parent.dist <- my.dist(parent)#
-parent.tree <- hclust(parent.dist, method="complete")#
-parent.dend <- as.dendrogram(parent.tree)#
-#
-heatmap(parent.T, Colv=NA, Rowv=parent.dend, col=greenred(64), labRow=NA, cexCol=0.5)
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)
-?hclust
-## Biology 311 Final Project#
-# Exploring RosR - Clustering Analysis#
-#
-## Loading all the required packages#
-library(dendextend)#
-library(gplots)#
-#
-# Read in the Gene Expression Data#
-gedata = read.csv("GEdata.csv", header=T, row.names=1)#
-#
-# Subset of the Parent Strain#
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
-#
-png("heatmap_reordered_parent.png")
-## Biology 311 Final Project#
-# Exploring RosR - Clustering Analysis#
-#
-## Loading all the required packages#
-library(dendextend)#
-library(gplots)#
-#
-# Read in the Gene Expression Data#
-gedata = read.csv("GEdata.csv", header=T, row.names=1)#
-#
-# Subset of the Parent Strain#
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
-#
-png("heatmap_reordered_parent.png")
-## Biology 311 Final Project#
-# Exploring RosR - Clustering Analysis#
-#
-## Loading all the required packages#
-library(dendextend)#
-library(gplots)#
-#
-# Read in the Gene Expression Data#
-gedata = read.csv("GEdata.csv", header=T, row.names=1)#
-#
-# Subset of the Parent Strain#
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-#
-png("heatmap_reordered_parent.png")#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
-dev.off()
-## Biology 311 Final Project#
-# Exploring RosR - Clustering Analysis#
-#
-## Loading all the required packages#
-library(dendextend)#
-library(gplots)#
-#
-# Read in the Gene Expression Data#
-gedata = read.csv("GEdata.csv", header=T, row.names=1)#
-#
-# Subset of the Parent Strain#
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-#
-png("heatmap_reordered_parent.png", width=1000, height=800)#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
-dev.off()
-## Biology 311 Final Project#
-# Exploring RosR - Clustering Analysis#
-#
-## Loading all the required packages#
-library(dendextend)#
-library(gplots)#
-#
-# Read in the Gene Expression Data#
-gedata = read.csv("GEdata.csv", header=T, row.names=1)#
-#
-# Subset of the Parent Strain#
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-#
-png("heatmap_reordered_parent.png", width=800, height=400)#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
-dev.off()
-## Biology 311 Final Project#
-# Exploring RosR - Clustering Analysis#
-#
-## Loading all the required packages#
-library(dendextend)#
-library(gplots)#
-#
-# Read in the Gene Expression Data#
-gedata = read.csv("GEdata.csv", header=T, row.names=1)#
-#
-# Subset of the Parent Strain#
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-#
-png("heatmap_reordered_parent.png", width=400, height=600)#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
-dev.off()
-## Biology 311 Final Project#
-# Exploring RosR - Clustering Analysis#
-#
-## Loading all the required packages#
-library(dendextend)#
-library(gplots)#
-#
-# Read in the Gene Expression Data#
-gedata = read.csv("GEdata.csv", header=T, row.names=1)#
-#
-# Subset of the Parent Strain#
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-#
-png("heatmap_reordered_parent.png", width=300, height=500)#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
-dev.off()
-## Biology 311 Final Project#
-# Exploring RosR - Clustering Analysis#
-#
-## Loading all the required packages#
-library(dendextend)#
-library(gplots)#
-#
-# Read in the Gene Expression Data#
-gedata = read.csv("GEdata.csv", header=T, row.names=1)#
-#
-# Subset of the Parent Strain#
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-#
-png("heatmap_reordered_parent.png", width=600, height=600)#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
-dev.off()
-source("ClusteringCode.r")
-source("ClusteringCode.r")
-source("ClusteringCode.r")
-?as.dist
-parent.cor <- cor(parent, use="pairwise.complete.obs")#
-parent.kmeans <- kmeans(1-parent.cor, 8)
-parent.kmeans <- kmeans(1-parent.cor, 8)#
-parent.kclusters <- parent.kmeans$cluster#
-table(parent.kclusters)
-parent.kmeans <- kmeans(1-parent.cor, 8)#
-parent.kclusters <- parent.kmeans$cluster#
-table(parent.kclusters)
-library(fpc)
-install fpc
-install.packages("fpc")
-library(fpc)
-asw <- numeric(20)
-for(k in 2:20)
-asw[[k]] <- pam(parent, k) $silinfo $ avg.width
-pam(parent, k)
-asw[[k]] <- pamk(parent, k) $silinfo $ avg.width
-library(fpc)#
-asw <- numeric(20)#
-for (k in 2:20)#
-  asw[[k]] <- pamk(parent, k) $ silinfo $ avg.width#
-k.best <- which.max(asw)
-n = 100#
-g = 6 #
-set.seed(g)#
-d <- data.frame(x = unlist(lapply(1:g, function(i) rnorm(n/g, runif(1)*i^2))), #
-                y = unlist(lapply(1:g, function(i) rnorm(n/g, runif(1)*i^2))))#
-plot(d)
-mydata <- d#
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-  for (i in 2:15) wss[i] <- sum(kmeans(mydata,#
-                                       centers=i)$withinss)#
-plot(1:15, wss, type="b", xlab="Number of Clusters",#
-     ylab="Within groups sum of squares")
-library(fpc)#
-pamk.best <- pamk(d)#
-cat("number of clusters estimated by optimum average silhouette width:", pamk.best$nc, "\n")#
-plot(pam(d, pamk.best$nc))
-library(fpc)#
-pamk.best <- pamk(d)#
-cat("number of clusters estimated by optimum average silhouette width:", pamk.best$nc, "\n")#
-plot(pamk(d, pamk.best$nc))
-wss <- (nrow(parent)-1)*sum(apply(parent,2,var))#
-  for (i in 2:15) wss[i] <- sum(kmeans(parent,#
-                                       centers=i)$withinss)#
-plot(1:15, wss, type="b", xlab="Number of Clusters",#
-     ylab="Within groups sum of squares")
+source("GEResponse.r")
 parent
-wss <- (nrow(parent[1])-1)*sum(apply(parent[1],2,var))#
-  for (i in 2:15) wss[i] <- sum(kmeans(parent[1],#
-                                       centers=i)$withinss)#
-plot(1:15, wss, type="b", xlab="Number of Clusters",#
-     ylab="Within groups sum of squares")
-mydata <- na.omit(parent)
-dim(mydata)
-dim(parent)
-mydata <- scale(mydata)
-dim(mydata)
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-for (i in 2:15) wss[i] <- sum(kmeans(mydata, #
-  	centers=i)$withinss)#
-plot(1:15, wss, type="b", xlab="Number of Clusters",#
-  ylab="Within groups sum of squares")
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-for (i in 2:8) wss[i] <- sum(kmeans(mydata, #
-  	centers=i)$withinss)#
-plot(1:8, wss, type="b", xlab="Number of Clusters",#
-  ylab="Within groups sum of squares")
-nrow(parent)
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-for (i in 2:8) wss[i] <- sum(kmeans(mydata, #
-  	centers=i)$withinss)
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-for (i in 2:7) wss[i] <- sum(kmeans(mydata, #
-  	centers=i)$withinss)
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-for (i in 2:7) wss[i] <- sum(kmeans(mydata, #
-  	centers=i)$withinss)#
-plot(1:7, wss, type="b", xlab="Number of Clusters",#
-  ylab="Within groups sum of squares")
-wss <- (nrow(parent)-1)*sum(apply(parent,2,var))#
-for (i in 2:7) wss[i] <- sum(kmeans(parent, #
-  	centers=i)$withinss)#
-plot(1:7, wss, type="b", xlab="Number of Clusters",#
-  ylab="Within groups sum of squares")
-mydata <- t(parent)
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-for (i in 2:7) wss[i] <- sum(kmeans(mydata, #
-  	centers=i)$withinss)#
-plot(1:7, wss, type="b", xlab="Number of Clusters",#
-  ylab="Within groups sum of squares")
-dim(mydata)
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-for (i in 2:200) wss[i] <- sum(kmeans(mydata, #
-  	centers=i)$withinss)#
-plot(1:200, wss, type="b", xlab="Number of Clusters",#
-  ylab="Within groups sum of squares")
-warnings()
-wss <- (nrow(mydata)-1)*sum(apply(mydata,2,var))#
-for (i in 2:200) wss[i] <- sum(kmeans(mydata, #
-  	centers=i)$withinss)#
-plot(1:200, wss, type="b", xlab="Number of Clusters",#
-  ylab="Within groups sum of squares")
+source("GEResponse.r")
+parent
+RosRParent = grepl("VNG0258H", parent)
+RosRParent
+RosRParent = subset(parent, grepl("VNG0258H", row.names(parent))
+RosRParent = subset(parent, grepl("VNG0258H", row.names(parent)))
+RosRParent
+plot(RosRParent)
+dim(RosRParent)
+scatter(RosRParent)
+hist(RosRParent)
+RosRParent$VNG0258H
+row.names(RosRParent)
+RosRParent$"VNG0258H"
+col.names(RosRParent)
+colnames(RosRParent)
+RosRParent["VNG0258H"]
+RosRParent[[]"VNG0258H"]]
+RosRParent[["VNG0258H"]]
+RosRParent(1)
+RosRParent[1]
+RosRParent[1:8]
+unlist(RosRParent[1:8])
+x <- unlist(RosRParent[1:8])
+x
+write.table(format(RosRParent, row.names=F, col.names=F))
+x <- write.table(format(RosRParent, row.names=F, col.names=F))
+length(x)
+x[2]
+x <- write.table(format(RosRParent), row.names=F, col.names=F))
+x <- write.table(format(RosRParent), row.names=F, col.names=F)
+x[2]
+x[0]
+list(x)
+RosRParent["X.40min_H2O2_ura3"]
+table(x)
+x
+x <- write.table(format(RosRParent), row.names=F, col.names=F)
+x
+x <- write.table(format(RosRParent, justify="right"), row.names=F, col.names=F)
+x
+x = write.table(format(RosRParent, justify="right"), row.names=F, col.names=F)
+x
+print(mat)
+print(RosRParent)
+list(RosRParent)
+unlist(RosRParent)
+x <- unlist(RosRParent)
+x[0]
+x[1]
+x[2]
+unlist(x[2])
+col.names(x)
+colnames(X)
+x
+colnames(x)
+row.names(x)
+x
+row.names(RosRParent)
+row.names(x)
+?read.csv
+x
+unlist(x)
+x[5]
+is.character(x)
+is.character(x[5])
+toString(x)
+x = toString(x)
+x
+list(x)
+x[5]
+x
+x[1]
+str_split(x, ",")
+library(stringr)
+str_split(x, ",")
+x
+x = str_split(x, ",")
+x
+x[1]
+list(x)
+x
+x[[1]]
+x[[2]]
+strtoi(x)
+x
+strtoi(x, base =10)
+x
+unlist(x)
+as.integer(x)
+as.float(x)
+as.numeric(x)
+import json
+b = c(-0.235669786, -0.018466872)
+b
+b[1]
+b[2]
+x
+unlist(x)
+x
+unlist(x)
+unlist(unlist(x))
+x = unlist(x)
+x
+x[1]
+x[2]
+as.numeric(x[1])
+as.numeric(x)
+RosRParent
+bbb = toString(RosRParent)
+bbb
+unlist(bbb)
+bbb = toString(RosRParent)
+as.numeric(bbb)
+unlist(bbb)
+as.numeric(bbb)
+unlist(bbb)
+bbb = unlist(bbb)
+as.numeric(bbb)
+RosRParentString = toString(RosRParent)
+RosRParentString
+RosRlist = unlist(RosRParentString)
+RosRlist[1]
+RosRlist
+RosRParentString = str_split(toString(RosRParent), ",")
+RosRParentString
+unlist(RosRParentString)
+RosRParentArray = unlist(RosRParentString)
+RosRParrentArray[1]
+RosRParentArray[1]
+RosRParentArray = as.numeric(unlist(RosRParentString))
+RosRParentArray
+RosRParentArray(1)
+RosRParentArray[1]
+plot(RosRParentArray)
+time = c(-40, 20, 0, 10, 20, 40, 60, 80)#
+#
+plot(time, RosRParentArray)
+time = c("-40", "20", "0", "10", "20", "40", "60", "80")#
+#
+plot(time, RosRParentArray)
+time
+RosRParentArray
+?plot
+plot(RosRParentArray)
+?plot
+colnames(RosRParent)
+plot(RosRParentArray, ylab = colnames(RosRParent))
+plot(RosRParentArray, xlab = colnames(RosRParent))
+plot(RosRParentArray, xlab = colnames(RosRParent)'')
+plot(RosRParentArray, xlab = colnames(RosRParent)')
+plot(RosRParentArray, xlab = t(colnames(RosRParent)))
+plot(RosRParentArray, Rowv = colnames(RosRParent))
+plot(RosRParentArray, xlab = colnames(RosRParent))
+plot(RosRParentArray, type = "l")
+plot(RosRParentArray)#
+plot(RosRDelArray)
+source("GEResponse.r")
+source("GEResponse.r")
+RosRPrentArray
+RosRParentArray
+RosRDelArray
+RosRParent
+RosRDelGene
+gedata[1:8]
+gedata = read.csv("GEdata.csv", header=T, row.names=1)#
+#
+# Subset of the Parent Strain#
 parent = gedata[1:8]#
 #
 # Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
+RosRDel = gedata[9:16]#
 #
-# Heatmap for the Parent Strain	#
-parent.T = parent#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)
-parent = gedata[1:8]#
+# Grabbing a specific gene#
+RosRParent = subset(parent, grepl("VNG0258H", row.names(parent)))#
+RosRDelGene = subset(parent, grepl("VNG0258H", row.names(RosRDel)))#
 #
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
+# Grab the expression levels#
+RosRParentString = str_split(toString(RosRParent), ",")#
+RosRParentArray = as.numeric(unlist(RosRParentString))#
 #
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)
-parent = t(gedata[1:8])#
-#
-# Subset of the RosR Deletion#
-RosRDel = t(gedata[9:16])#
-#
-# Heatmap for the Parent Strain	#
-parent.T = t(parent)#
-parent.max.times <- apply(parent.T, 1, which.max)#
-parent.gene.order <- rev(order(parent.max.times))#
-reordered.parent <- parent.T[parent.gene.order, 1:8]#
-heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)
-dim(parent)
-dim(mydata)
-dim(parent.T)
-wss <- (nrow(parent.T)-1)*sum(apply(parent.T,2,var))#
-for (i in 2:100) wss[i] <- sum(kmeans(parent.T, #
-  	centers=i)$withinss)#
-plot(1:100, wss, type="b", xlab="Number of Clusters",#
-  ylab="Within groups sum of squares")
-parent.cor <- cor(parent, use="pairwise.complete.obs")#
-parent.kmeans <- kmeans(1-parent.cor, 10)#
-parent.kclusters <- parent.kmeans$cluster#
-table(parent.kclusters)
-# Determining the "best" number of clusters using elbow plot#
-wss <- (nrow(parent.T)-1)*sum(apply(parent.T,2,var))#
-for (i in 2:100) wss[i] <- sum(kmeans(parent.T, centers=i)$withinss)#
-png("elbow_plot_parent.png")#
-plot(1:100, wss, type="b", xlab="Number of Clusters", ylab="Within groups sum of squares")#
-dev.off()
-parent.kclusters <- parent.kclusters[order.dendrogram(parent.dend)]#
-dend.colors <- unique(get_leaves_branches_attr(color_branches(parent.dend, k=10, attr="col")))#
-#
-plot(branches_attr_by_clusters(parent.dend, parent.kclusters, dend.colors) ,leaflab="none")
-png("kmeans_parent.png")#
-plot(branches_attr_by_clusters(parent.dend, parent.kclusters, dend.colors) ,leaflab="none")#
-dev.off()
-parent.cor <- cor(parent, use="pairwise.complete.obs")#
-> parent.kmeans <- kmeans(1-parent.cor, 10)#
-> parent.kclusters <- parent.kmeans$cluster#
-> table(parent.kclusters)
-parent.cor <- cor(parent, use="pairwise.complete.obs")#
-parent.kmeans <- kmeans(1-parent.cor, 10)#
-parent.kclusters <- parent.kmeans$cluster#
-table(parent.kclusters)
-?wich
-?which
-names(parent.kclusters)
-parent.kclusters
-parent.kclusters(VNG6320C)
-parent.kclusters()==VNG6320C
-names(parent.kclusters)
-names(parent.kclusters)==VNG6438G
-names(parent.kclusters)=="VNG6438G"
-parent.kclusters
-parent.kclusters == VNG6430C
-parent.kclusters == "VNG6430C"
-parent.kclusters == "VNG6441H"
-names(parent.kclusters) == "VNG6441H"
-match(names(parent.kclusters), "VNG6441H")
-which(names(parent.kclusters)=="VNG6441H")
-which(parent.kclusters=="VNG6441H")
-which(parent.kclusters==VNG6441H)
-parent.kclusters
-parent.kclusters
-parent.kclusters$
-parent.kclusters$lower
+RosRDelString =  str_split(toString(RosRDelGene), ",")#
+RosRDelArray = as.numeric(unlist(RosRDelString))
+RosRParentArray
+RosRDelArray
+RosRDelGene
+source("GEResponse.r")
+library(ggplot2)
+df <- data.frame(colnames(parent), RosRDelArray, RosRParentArray)
+df
+ggplot(df)
+ggplot(df, aes(x))
+plot(df)
+ggplot(df)
+df <- data.frame(RosParentArray, RosRDelArray)
+df <- data.frame(RosRParentArray, RosRDelArray)
+df
+ggplot(df)
+ggplot(df, geom_line(aes(y=RosParentArray))
+ggplot(df, geom_line(aes(y=RosParentArray))
+ggplot(df) + geom_line(RosParentArray)
+ggplot(df) + geom_line(RosRParentArray)
+ggplot(df) + geom_line(aes(y=RosRParentArray))
+x = c(1,2,3,4,5,6,7,8)
+df <- data.frame(x, RosParentArray, RosRDelArray)
+df <- data.frame(x, RosRParentArray, RosRDelArray)
+df
+ggplot(df, aes(x))
+ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red")
+ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray, colour="green"))
+ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
+ggplot(df) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
+ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
+?ggplot
+x
+x = 2
+x
+ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
+ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
+ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
+ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green") + ylab("blurp")
+ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray), colour="Parent") + geom_line(aes(y=RosRDelArray), colour="RosR Knockout")
+ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent") + geom_line(aes(y=RosRDelArray, colour="RosR Knockout")
+ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent") + geom_line(aes(y=RosRDelArray, colour="RosR Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red")) + ylab("Normalized log 10 Expression Ratio")
+ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent") + geom_line(aes(y=RosRDelArray, colour="RosR Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red")) + ylab("Normalized log 10 Expression Ratio"))
+ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent")) + geom_line(aes(y=RosRDelArray, colour="RosR Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red")) + ylab("Normalized log 10 Expression Ratio")
+ggplot(df, aes(x = colnames(parent)))
+ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent")) + geom_line(aes(y=RosRDelArray, colour="RosR_Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red"))
+ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent")) + geom_line(aes(y=RosRDelArray, colour="RosR_Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red")) + xlab(" ") + ylab("Normalized log 10 Expression Ratio")
+ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="green")) + geom_line(aes(y=RosRDelArray, colour="red"))
+ggplot(df, aes(x = colnames(parent))) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+ggplot(df, aes(x = colnames(parent), group=1 )) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+ggplot(df, aes(x = colnames(parent), group=1 )) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+ggplot(df, aes(x = colnames(parent), group=2 )) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+ggplot(data = df, aes(x = colnames(parent), group=2 )) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+ggplot(data = df, aes(x = colnames(parent))) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+ggplot(data = df, aes(x = colnames(parent), y='blurp')) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+ggplot(data = df, aes(x = colnames(parent), y='blurp')) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")ggplot(data = df, aes(x = colnames(parent), group=breaks )) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+factor(colnames(parent))
+RosRData <- data.frame(#
+	condition = factor(c("Parent", "RosR Knockout")),#
+	time = factor(colnames(parent)),#
+	levels = c(RosRParentArray, RosRDelArray)#
+)
+RosRData
+ggplot(data=RosRData, aes(x=time, y=levels, group=condition, shape=condition)) + geom_line() + geom_point()

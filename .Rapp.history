@@ -1,3 +1,50 @@
+install.package("ggplot2")
+?install.packaga
+?install.package
+install.package("ggplot2")
+install.packages("ggplot2")
+install.packages("dendextend")
+import(ggplot2)
+library(ggplot2)
+library(dendextend)
+yeast <- read.csv("http://roybatty.org/spellman-tocluster.csv", header=T, row.names=1)
+dim(yeast)
+names(yeast)[1:5]
+row.names(yeast)[1:5]
+summary(yeast$YAL022C)
+hist(yeast$YAL022c)
+hist(yeast$YAL022C)
+hist(yeast$YAL022C, breaks=15, col='firebrick', xlab="Expression of YAL022C", main="Histogram of Gene YAL022C")
+boxplot(yeast$YAL022C, ylab="Expression", main="Boxplot of YAL022C")
+qplot(YAL022C, data=yeast, geom="histogram", binwidth= 0.2)
+qplot(YAL022C, YAL040C, data=yeast, geom="point")
+yeast.cor <- cor(yeast, use="pairwise.complete.obs")
+yeast.dist <- as.dist(1-yeast.cor)
+yeast.tree <- hclust(yeast.dist, method="complete")
+plot(yeast.tree)
+plot(yeast.tree, cex=0.2)
+yeast.dend <- as.dendrogram(yeast.tree)
+nleaves(yeast.dend)
+nnode(yeast.dend)
+nnodes(yeast.dend)
+plot(yeast.dend, leaflab="none")
+yeast.clusters <- cutree(yeast.dend, k-4)
+yeast.clusters <- cutree(yeast.dend, k=4)
+tableyeast.clusters)
+table(yeast.clusters)
+yeast.cluster[1:6]
+yeast.clusters[1:6]
+plot(color_branche(yeast.dend, k=4), leaflab="none")
+plot(color_branch(yeast.dend, k=4), leaflab="none")
+plot(color_branches(yeast.dend, k=4), leaflab="none")
+plot(color_branches(yeast.dend, k=8), leaflab="none")
+yeast.clusters8 <- cutree(yeast.dend, k=8, order_clusters_as_data = FALSE)
+table(yeast.clusters8)
+names(yeast.clutser8[yeast.cluster8 == 1])
+names(yeast.clutser8[yeast.clusters8 == 1])
+names(yeast.clusters8[yeast.clusters8 == 1])
+cluster1 <- names(yeast.clutster8[yeast.cluster8 == 1])
+cluster1 <- names(yeast.cluster8[yeast.cluster8 == 1])
 cluster1 <- names(yeast.clusters8[yeast.clusters8 == 1])
 cat(cluster1, quote=F, sep="\n")
 test.data <- rbind(matrix(rnorm(100, mean=0, sd=0.2),ncol=2),#
@@ -33,173 +80,28 @@ source("https://bioconductor.org/biocLite.R")#
 biocLite("graph")#
 biocLite("Rgraphviz")#
 biocLite("RBGL")
-source("GEResponse.r")
-parent
-source("GEResponse.r")
-parent
-RosRParent = grepl("VNG0258H", parent)
-RosRParent
-RosRParent = subset(parent, grepl("VNG0258H", row.names(parent))
-RosRParent = subset(parent, grepl("VNG0258H", row.names(parent)))
-RosRParent
-plot(RosRParent)
-dim(RosRParent)
-scatter(RosRParent)
-hist(RosRParent)
-RosRParent$VNG0258H
-row.names(RosRParent)
-RosRParent$"VNG0258H"
-col.names(RosRParent)
-colnames(RosRParent)
-RosRParent["VNG0258H"]
-RosRParent[[]"VNG0258H"]]
-RosRParent[["VNG0258H"]]
-RosRParent(1)
-RosRParent[1]
-RosRParent[1:8]
-unlist(RosRParent[1:8])
-x <- unlist(RosRParent[1:8])
-x
-write.table(format(RosRParent, row.names=F, col.names=F))
-x <- write.table(format(RosRParent, row.names=F, col.names=F))
-length(x)
-x[2]
-x <- write.table(format(RosRParent), row.names=F, col.names=F))
-x <- write.table(format(RosRParent), row.names=F, col.names=F)
-x[2]
-x[0]
-list(x)
-RosRParent["X.40min_H2O2_ura3"]
-table(x)
-x
-x <- write.table(format(RosRParent), row.names=F, col.names=F)
-x
-x <- write.table(format(RosRParent, justify="right"), row.names=F, col.names=F)
-x
-x = write.table(format(RosRParent, justify="right"), row.names=F, col.names=F)
-x
-print(mat)
-print(RosRParent)
-list(RosRParent)
-unlist(RosRParent)
-x <- unlist(RosRParent)
-x[0]
-x[1]
-x[2]
-unlist(x[2])
-col.names(x)
-colnames(X)
-x
-colnames(x)
-row.names(x)
-x
-row.names(RosRParent)
-row.names(x)
-?read.csv
-x
-unlist(x)
-x[5]
-is.character(x)
-is.character(x[5])
-toString(x)
-x = toString(x)
-x
-list(x)
-x[5]
-x
-x[1]
-str_split(x, ",")
-library(stringr)
-str_split(x, ",")
-x
-x = str_split(x, ",")
-x
-x[1]
-list(x)
-x
-x[[1]]
-x[[2]]
-strtoi(x)
-x
-strtoi(x, base =10)
-x
-unlist(x)
-as.integer(x)
-as.float(x)
-as.numeric(x)
-import json
-b = c(-0.235669786, -0.018466872)
-b
-b[1]
-b[2]
-x
-unlist(x)
-x
-unlist(x)
-unlist(unlist(x))
-x = unlist(x)
-x
-x[1]
-x[2]
-as.numeric(x[1])
-as.numeric(x)
-RosRParent
-bbb = toString(RosRParent)
-bbb
-unlist(bbb)
-bbb = toString(RosRParent)
-as.numeric(bbb)
-unlist(bbb)
-as.numeric(bbb)
-unlist(bbb)
-bbb = unlist(bbb)
-as.numeric(bbb)
-RosRParentString = toString(RosRParent)
-RosRParentString
-RosRlist = unlist(RosRParentString)
-RosRlist[1]
-RosRlist
-RosRParentString = str_split(toString(RosRParent), ",")
-RosRParentString
-unlist(RosRParentString)
-RosRParentArray = unlist(RosRParentString)
-RosRParrentArray[1]
-RosRParentArray[1]
-RosRParentArray = as.numeric(unlist(RosRParentString))
-RosRParentArray
-RosRParentArray(1)
-RosRParentArray[1]
-plot(RosRParentArray)
-time = c(-40, 20, 0, 10, 20, 40, 60, 80)#
+source('GEResponse.r')
+RosRData <- data.frame(#
+	condition = factor(c("Parent", "RosR Knockout")),#
+	time = factor(colnames(parent)),#
+	levels = c(RosRParentArray, RosRDelArray)#
+)#
 #
-plot(time, RosRParentArray)
-time = c("-40", "20", "0", "10", "20", "40", "60", "80")#
+ggplot(data=RosRData, aes(x=time, y=levels, group=condition, shape=condition)) + geom_line() + geom_point()
+RosRData
+parent
+RosRData <- data.frame(#
+	condition = factor(c("Parent", "RosR Knockout")),#
+	time = factor(colnames(parent)),#
+	levels = c(RosRParentArray, RosRDelArray)#
+)
+## Biology 311 Final Project#
+# Exploring RosR - Clustering Analysis#
 #
-plot(time, RosRParentArray)
-time
-RosRParentArray
-?plot
-plot(RosRParentArray)
-?plot
-colnames(RosRParent)
-plot(RosRParentArray, ylab = colnames(RosRParent))
-plot(RosRParentArray, xlab = colnames(RosRParent))
-plot(RosRParentArray, xlab = colnames(RosRParent)'')
-plot(RosRParentArray, xlab = colnames(RosRParent)')
-plot(RosRParentArray, xlab = t(colnames(RosRParent)))
-plot(RosRParentArray, Rowv = colnames(RosRParent))
-plot(RosRParentArray, xlab = colnames(RosRParent))
-plot(RosRParentArray, type = "l")
-plot(RosRParentArray)#
-plot(RosRDelArray)
-source("GEResponse.r")
-source("GEResponse.r")
-RosRPrentArray
-RosRParentArray
-RosRDelArray
-RosRParent
-RosRDelGene
-gedata[1:8]
+## Loading all the required packages#
+library(ggplot2)#
+#
+# Read in the Gene Expression Data#
 gedata = read.csv("GEdata.csv", header=T, row.names=1)#
 #
 # Subset of the Parent Strain#
@@ -210,7 +112,136 @@ RosRDel = gedata[9:16]#
 #
 # Grabbing a specific gene#
 RosRParent = subset(parent, grepl("VNG0258H", row.names(parent)))#
-RosRDelGene = subset(parent, grepl("VNG0258H", row.names(RosRDel)))#
+RosRDelGene = subset(RosRDel, grepl("VNG0258H", row.names(RosRDel)))#
+#
+# Grab the expression levels#
+RosRParentString = str_split(toString(RosRParent), ",")#
+RosRParentArray = as.numeric(unlist(RosRParentString))#
+#
+RosRDelString =  str_split(toString(RosRDelGene), ",")#
+RosRDelArray = as.numeric(unlist(RosRDelString))#
+## NEED TO FIGURE THIS OUT #
+RosRData <- data.frame(#
+	condition = factor(c("Parent", "RosR Knockout")),#
+	time = factor(colnames(parent)),#
+	levels = c(RosRParentArray, RosRDelArray)#
+)#
+#
+ggplot(data=RosRData, aes(x=time, y=levels, group=condition, shape=condition)) + geom_line() + geom_point()#
+ggplot(data = df, aes(x = colnames(parent), group=breaks )) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio") #
+# Heatmap for the Parent Strain	#
+parent.T = t(parent)#
+parent.max.times <- apply(parent.T, 1, which.max)#
+parent.gene.order <- rev(order(parent.max.times))#
+reordered.parent <- parent.T[parent.gene.order, 1:8]#
+#
+# png("heatmap_reordered_parent.png", width=600, height=600)#
+# heatmap(reordered.parent, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
+# dev.off()#
+#
+# # Clustering for the Parent Strain#
+# my.dist <- function(x) {as.dist(1 - cor(x, use="pairwise.complete.obs"))}#
+# parent.dist <- my.dist(parent)#
+# parent.tree <- hclust(parent.dist, method="complete")#
+# parent.dend <- as.dendrogram(parent.tree)#
+#
+# png("heatmap_with_dendrogram_parent.png", width=600, height=600)#
+# heatmap(parent.T, Colv=NA, Rowv=parent.dend, col=greenred(64), labRow=NA, cexCol=0.5)#
+# dev.off()#
+#
+# # Heatmap for the RosR Knockout#
+# RosR.T = t(RosRDel)#
+# RosR.max.times <- apply(RosR.T, 1, which.max)#
+# RosR.gene.order <- rev(order(RosR.max.times))#
+# reordered.RosR <- parent.T[RosR.gene.order, 1:8]#
+#
+# png("heatmap_reordered_RosRDel.png", width=600, height=600)#
+# heatmap(reordered.RosR, Colv=NA, Rowv=NA, col=greenred(64), labRow=NA, cexCol=0.5)#
+# dev.off()#
+#
+# # Clustering for the RosR Knockout#
+# RosR.dist <- my.dist(RosRDel)#
+# RosR.tree <- hclust(RosR.dist, method="complete")#
+# RosR.dend <- as.dendrogram(RosR.tree)#
+#
+# png("heatmap_with_dendrogram_RosRDel.png", width=600, height=600)#
+# heatmap(parent.T, Colv=NA, Rowv=RosR.dend, col=greenred(64), labRow=NA, cexCol=0.5)#
+# dev.off()#
+# ### Clustering Algorithms#
+#
+# # Determining the "best" number of clusters using elbow plot#
+# wss <- (nrow(parent.T)-1)*sum(apply(parent.T,2,var))#
+# for (i in 2:100) wss[i] <- sum(kmeans(parent.T, centers=i)$withinss)#
+# png("elbow_plot_parent.png")#
+# plot(1:100, wss, type="b", xlab="Number of Clusters", ylab="Within groups sum of squares")#
+# dev.off()#
+# # 10 was determined to be appropriate#
+#
+# parent.cor <- cor(parent, use="pairwise.complete.obs")#
+# parent.kmeans <- kmeans(1-parent.cor, 10)#
+# parent.kclusters <- parent.kmeans$cluster#
+# table(parent.kclusters)#
+#
+# # Rearranging k-means clusters for different colors for dendrogram#
+# parent.kclusters <- parent.kclusters[order.dendrogram(parent.dend)]#
+# dend.colors <- unique(get_leaves_branches_attr(color_branches(parent.dend, k=10, attr="col")))#
+#
+# png("kmeans_parent.png")#
+# plot(branches_attr_by_clusters(parent.dend, parent.kclusters, dend.colors) ,leaflab="none")#
+# dev.off()#
+#
+# VNG0258H gene is in cluster 6
+## Loading all the required packages#
+library(ggplot2)#
+#
+# Read in the Gene Expression Data#
+gedata = read.csv("GEdata.csv", header=T, row.names=1)#
+#
+# Subset of the Parent Strain#
+parent = gedata[1:8]#
+#
+# Subset of the RosR Deletion#
+RosRDel = gedata[9:16]#
+#
+# Grabbing a specific gene#
+RosRParent = subset(parent, grepl("VNG0258H", row.names(parent)))#
+RosRDelGene = subset(RosRDel, grepl("VNG0258H", row.names(RosRDel)))#
+#
+# Grab the expression levels#
+RosRParentString = str_split(toString(RosRParent), ",")#
+RosRParentArray = as.numeric(unlist(RosRParentString))#
+#
+RosRDelString =  str_split(toString(RosRDelGene), ",")#
+RosRDelArray = as.numeric(unlist(RosRDelString))#
+## NEED TO FIGURE THIS OUT #
+RosRData <- data.frame(#
+	condition = factor(c("Parent", "RosR Knockout")),#
+	time = factor(colnames(parent)),#
+	levels = c(RosRParentArray, RosRDelArray)#
+)#
+#
+ggplot(data=RosRData, aes(x=time, y=levels, group=condition, shape=condition)) + geom_line() + geom_point()
+library(ggplot2)#
+#
+# Read in the Gene Expression Data#
+gedata = read.csv("GEdata.csv", header=T, row.names=1)#
+#
+# Subset of the Parent Strain#
+parent = gedata[1:8]#
+#
+# Subset of the RosR Deletion#
+RosRDel = gedata[9:16]#
+#
+# Grabbing a specific gene#
+RosRParent = subset(parent, grepl("VNG0258H", row.names(parent)))#
+RosRDelGene = subset(RosRDel, grepl("VNG0258H", row.names(RosRDel)))#
 #
 # Grab the expression levels#
 RosRParentString = str_split(toString(RosRParent), ",")#
@@ -218,129 +249,59 @@ RosRParentArray = as.numeric(unlist(RosRParentString))#
 #
 RosRDelString =  str_split(toString(RosRDelGene), ",")#
 RosRDelArray = as.numeric(unlist(RosRDelString))
-RosRParentArray
-RosRDelArray
-RosRDelGene
-source("GEResponse.r")
-library(ggplot2)
-df <- data.frame(colnames(parent), RosRDelArray, RosRParentArray)
-df
-ggplot(df)
-ggplot(df, aes(x))
-plot(df)
-ggplot(df)
-df <- data.frame(RosParentArray, RosRDelArray)
-df <- data.frame(RosRParentArray, RosRDelArray)
-df
-ggplot(df)
-ggplot(df, geom_line(aes(y=RosParentArray))
-ggplot(df, geom_line(aes(y=RosParentArray))
-ggplot(df) + geom_line(RosParentArray)
-ggplot(df) + geom_line(RosRParentArray)
-ggplot(df) + geom_line(aes(y=RosRParentArray))
-x = c(1,2,3,4,5,6,7,8)
-df <- data.frame(x, RosParentArray, RosRDelArray)
-df <- data.frame(x, RosRParentArray, RosRDelArray)
-df
-ggplot(df, aes(x))
-ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red")
-ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray, colour="green"))
-ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
-ggplot(df) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
-ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
-?ggplot
-x
-x = 2
-x
-ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
-ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
-ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green")
-ggplot(df, aes(x)) + geom_line(aes(y=RosRParentArray), colour="red") + geom_line(aes(y=RosRDelArray), colour="green") + ylab("blurp")
-ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray), colour="Parent") + geom_line(aes(y=RosRDelArray), colour="RosR Knockout")
-ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent") + geom_line(aes(y=RosRDelArray, colour="RosR Knockout")
-ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent") + geom_line(aes(y=RosRDelArray, colour="RosR Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red")) + ylab("Normalized log 10 Expression Ratio")
-ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent") + geom_line(aes(y=RosRDelArray, colour="RosR Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red")) + ylab("Normalized log 10 Expression Ratio"))
-ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent")) + geom_line(aes(y=RosRDelArray, colour="RosR Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red")) + ylab("Normalized log 10 Expression Ratio")
-ggplot(df, aes(x = colnames(parent)))
-ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent")) + geom_line(aes(y=RosRDelArray, colour="RosR_Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red"))
-ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="Parent")) + geom_line(aes(y=RosRDelArray, colour="RosR_Knockout")) + scale_colour_manual("", breaks = c("Parent", "RosR Knockout"), values = c("green", "red")) + xlab(" ") + ylab("Normalized log 10 Expression Ratio")
-ggplot(df, aes(x = colnames(parent))) + geom_line(aes(y=RosRParentArray, colour="green")) + geom_line(aes(y=RosRDelArray, colour="red"))
-ggplot(df, aes(x = colnames(parent))) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")
-ggplot(df, aes(x = colnames(parent), group=1 )) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")
-ggplot(df, aes(x = colnames(parent), group=1 )) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")
-ggplot(df, aes(x = colnames(parent), group=2 )) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")
-ggplot(data = df, aes(x = colnames(parent), group=2 )) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")
-ggplot(data = df, aes(x = colnames(parent))) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")
-ggplot(data = df, aes(x = colnames(parent), y='blurp')) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")
-ggplot(data = df, aes(x = colnames(parent), y='blurp')) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")ggplot(data = df, aes(x = colnames(parent), group=breaks )) + #
-	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
-	geom_line(aes(y=RosRDelArray, colour="red")) + #
-	scale_colour_manual("", #
-		breaks = c("Parent", "RosR Knockout"), #
-		values = c("green", "red")) + #
-	xlab(" ") + #
-	scale_y_continuous("Normalized log 10 Expression Ratio")
-factor(colnames(parent))
+str_split
+import string r
+import stringr
+library(stringr)
+## Loading all the required packages#
+library(ggplot2)#
+library(stringr)#
+#
+# Read in the Gene Expression Data#
+gedata = read.csv("GEdata.csv", header=T, row.names=1)#
+#
+# Subset of the Parent Strain#
+parent = gedata[1:8]#
+#
+# Subset of the RosR Deletion#
+RosRDel = gedata[9:16]#
+#
+# Grabbing a specific gene#
+RosRParent = subset(parent, grepl("VNG0258H", row.names(parent)))#
+RosRDelGene = subset(RosRDel, grepl("VNG0258H", row.names(RosRDel)))#
+#
+# Grab the expression levels#
+RosRParentString = str_split(toString(RosRParent), ",")#
+RosRParentArray = as.numeric(unlist(RosRParentString))#
+#
+RosRDelString =  str_split(toString(RosRDelGene), ",")#
+RosRDelArray = as.numeric(unlist(RosRDelString))#
+## NEED TO FIGURE THIS OUT #
 RosRData <- data.frame(#
 	condition = factor(c("Parent", "RosR Knockout")),#
 	time = factor(colnames(parent)),#
 	levels = c(RosRParentArray, RosRDelArray)#
 )
-RosRData
 ggplot(data=RosRData, aes(x=time, y=levels, group=condition, shape=condition)) + geom_line() + geom_point()
+ggplot(data = df, aes(x = colnames(parent), group=breaks )) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) + #
+	scale_colour_manual("", #
+		breaks = c("Parent", "RosR Knockout"), #
+		values = c("green", "red")) + #
+	xlab(" ") + #
+	scale_y_continuous("Normalized log 10 Expression Ratio")
+ggplot(data = df, aes(x = colnames(parent), group=breaks )) + #
+	geom_line(aes(y=RosRParentArray, colour="Parent")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) +
+xlab(" ")
+ggplot(data = df, aes(x = colnames(parent), group=breaks )) + #
+	geom_line(aes(y=RosRParentArray, colour="green")) + 		#
+	geom_line(aes(y=RosRDelArray, colour="red")) +
+xlab(" ")
+ggplot(data = df, aes(x = colnames(parent), group=breaks )) + #
+	geom_line(aes(y=RosRParentArray), colour="green") + 		#
+	geom_line(aes(y=RosRDelArray), colour="red")
+RosRParent Array
+RosRParentArray
+RosRDelArray

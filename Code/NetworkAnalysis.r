@@ -49,7 +49,7 @@ V(g)$color <- c("steelblue", "lightcoral")[V(g)$type+1]
 big.cc <- giant.component(g)
 
 png("network_attempt.png")
-plot(big.cc, vertex.label.cex=0.65, vertex.label.degree=180, vertex.label.dist=.1)
+plot(big.cc, vertex.label.cex=0.75, vertex.label.degree=180, asp = 0, vertex.size = 10, edge.arrow.size = 1, mark.expand = 100)
 dev.off()
 
 big.cc.tfs <- V(big.cc)[V(big.cc)$type == F]
@@ -61,4 +61,4 @@ V(g.shared)$size <- sqrt(degree(g.shared))
 E(g.shared)$width <- sqrt(E(g.shared)$weight)
 
 l <- layout_with_fr(g.shared, weights=E(g.shared)$weight)
-plot(g.shared, vertex.label=NA, layout=l)
+#plot(g.shared, vertex.label=NA, layout=l)
